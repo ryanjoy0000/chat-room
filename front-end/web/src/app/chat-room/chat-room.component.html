@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h4>Received Messages</h4>
+      <div>{{ receivedMsg }}</div>
+    </div>
+    <div class="col">
+      <h4>Send Messages</h4>
+      <form>
+        <textarea
+          [formControl]="userTextFC"
+          class="form-control"
+          id="text"
+          rows="5"
+        ></textarea>
+        <button
+          type="button"
+          (click)="send($event)"
+          class="btn btn-primary mt-2"
+        >
+          Send
+        </button>
+        <button
+          type="button"
+          (click)="createRoom($event)"
+          class="btn btn-primary mt-2"
+        >
+          Create Room
+        </button>
+        <button
+          type="button"
+          (click)="joinRoom($event)"
+          class="btn btn-primary mt-2"
+        >
+          Join Room
+        </button>
+        <button
+          type="button"
+          (click)="setupWS($event)"
+          class="btn btn-secondary mt-2"
+        >
+          Setup WebSocket
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
